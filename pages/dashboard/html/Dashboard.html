@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <!-- Bootstrap Styling Css Package  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <possible Bootstrap Icons to represent metrics data more interactively in the page> -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../styling/css/styles.css">
+
+
+</head>
+
+<body>
+
+    <!-- <Sidebar> -->
+
+    <nav class="sidebar" id="sidebar">
+        <div class="logo d-flex align-items-center gap-2">
+
+            <div class="logo-icon">
+                <i class="bi bi-graph-up"></i>
+
+
+            </div>
+            <span class="text-dark fw-bold">Financial Dashboard</span>
+        </div>
+
+
+        <ul class="nav-pills flex-column">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-section="dashboard">
+                    <i class="bi bi-grid-1x2"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="schedule">
+                    <i class="bi bi-calendar3"></i>
+                    Schedule
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="message">
+                    <i class="bi bi-envelope-paper"></i>
+                    Message
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="analytics">
+                    <i class="bi bi-bar-chart"></i>
+                    Analytics
+                </a>
+
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="team">
+                    <i class="bi bi-people"></i>
+                    Team
+                </a>
+            </li>
+
+
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="#" data-section="profile">
+                    <i class="bi bi-person"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="settings">
+                    <i class="bi bi-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+            <li class="nav-item  mt-5">
+                <a class="nav-link" href="#" data-section="help">
+                    <i class="bi bi-question-circle"></i>
+                    Help
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-section="logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header class="d-flex justify-content-between align-items-center mb-4">
+            <div class="header-search">
+                <div class="position-relative">
+                    <i class="bi bi-search search-icon"></i>
+                    <input type="text" class="form-control" placeholder="Search here..." name="" id="">
+                </div>
+            </div>
+
+            <div class="user-profile">
+                <div class="profile-icon ">
+                    <i class="bi bi-bell text-muted"></i>
+                </div>
+                <div class="profile-icon ">
+                    <i class="bi bi-chat-left-text"></i>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="bi bi-image"></i>
+                    </div>
+                    <span class="fw-medium typography">Mirie Kiritani</span>
+                    <div class="profile-icon">
+                        <i class="bi bi-chevron-down text-muted"></i>
+                    </div>
+                </div>
+
+
+            </div>
+        </header>
+
+        <!-- Section for the Overview -->
+        <div class="mb-4 overview">
+            <h4 class="section-title mb-3">Overview</h4>
+
+            <!-- Metrics Card -->
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="card dashboard-card balance-card metric-card fade-in p-4 gap-3">
+
+
+                        <!-- Left Side: Icon and Text -->
+                        <div class="d-flex align-items-center gap-3">
+                            <!-- Icon -->
+                            <div class="card-icon bg-opacity-25">
+                                <i class="fa-solid fa-wallet"></i>
+                            </div>
+
+                            <!-- Text Section -->
+                            <div class="d-flex flex-column gap-3">
+                                <!-- Title -->
+                                <span style="font-weight: 600; font-size: 18px; line-height: 24px;">
+                                    Your Balance
+                                </span>
+
+                                <!-- Subtitle -->
+                                <div class="card-subtitle">
+                                    <i class="bi bi-arrow-up"></i>
+                                    <span>15% compared with last month</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-2 border border-secondary-outline" />
+
+
+                        <div class="card-amount d-flex align-items-center">
+                            <h4>$28,891.138</h4>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="card dashboard-card metric-card fade-in p-4 gap-3 ">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="card-icon bg-success bg-opacity-25 text-success">
+                                <i class="bi bi-piggy-bank"></i>
+                            </div>
+                            <div class="d-flex flex-column gap-3">
+                                <span style="font-weight: 600; font-size: 18px; line-height: 24px;">Saving</span>
+                                <div class="card-subtitle text-success">
+                                    <i class="bi bi-arrow-up"></i>
+                                    10% compared with last month
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr class="my-2 border border-secondary-outline" />
+                        <div class="card-amount d-flex align-items-center">
+                            <h4>$1,050.44</h4>
+                            <i class="bi bi-arrow-right"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <div class="card dashboard-card metric-card fade-in p-4 gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="card-icon bg-warning bg-opacity-25 text-warning">
+                                <i class="bi bi-credit-card"></i>
+                            </div>
+                            <div class="d-flex flex-column gap-3">
+                                <span style="font-weight: 600; font-size: 18px; line-height: 24px;">Expenses</span>
+                                <div class="card-subtitle text-warning">
+                                    <i class="bi bi-arrow-down"></i>
+                                    2% compared with last month
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <hr class="my-2 border border-secondary-outline" />
+
+                        <div class="card-amount d-flex align-items-center">
+                            <h4>$200.31</h4>
+                            <i class="bi bi-arrow-right"></i>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="card dashboard-card metric-card fade-in p-4 gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="card-icon bg-info bg-opacity-25 text-info">
+                                <i class="bi bi-arrow-down-square-fill"></i>
+                            </div>
+                            <div class="d-flex flex-column gap-3">
+                                <span style="font-weight: 600; font-size: 18px; line-height: 24px;">Incomes</span>
+                                <div class="card-subtitle text-info">
+                                    <i class="bi bi-arrow-down"></i>
+                                    8% compared with last month
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <hr class="my-2 border border-secondary-outline" />
+
+                        <div class="card-amount d-flex align-items-center">
+                            <h4>$21,121.0</h4>
+                            <i class="bi bi-arrow-right"></i>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Analytics chart Section -->
+        <div class="row g-4">
+            <!-- Analytics Chart -->
+            <div class="col-lg-8">
+                <div class="analytics-card fade-in">
+                    <div class="d-flex justify-content-between align-items-center mb-3 chart-header"
+                        style="flex-wrap: nowrap; gap: 32px">
+                        <h4 class="subsection-title mb-0">Analytics</h4>
+                        <!-- Chart Legends -->
+                        <div class="d-flex align-items-center chart-legend">
+                            <div class="legend-item d-flex align-items-center" style="gap: 0.6rem;">
+                                <div class="legend-dot legend-purple "></div>
+                                    <span>Label 1</span>
+                                
+                            </div>
+                            <div class="legend-item d-flex align-items-center" style="gap: 0.6rem;">
+                                <div class="legend-dot legend-orange"></div>
+                                <span>Label 2</span>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown Option on the very right side -->
+                        <select class="form-select form-select-sm" style="width: auto; min-width: 100px;">
+                            <option>Weekly</option>
+                            <option>Monthly</option>
+                            <option>Yearly</option>
+
+                        </select>
+                    </div>
+                    <!-- Chart Container Section -->
+                    <div id="chartContainer" style="display: flex; gap: 10px; align-items: center; height: 304px;">
+                        <div id="yAxisLabels"
+                            style="width: 27px; height: 304px; display: flex; flex-direction: column; justify-content: space-between; font-size: 14px; color: #000; opacity: 60%; user-select: none; margin-right: 5px;">
+                            <div>20K</div>
+                            <div>15K</div>
+                            <div>10K</div>
+                            <div>5K</div>
+                            <div>1K</div>
+                            <div>0K</div>
+                        </div>
+
+                        <canvas id="analyticsChart" width="632" height="270"
+                            style="width: 632px; height: 270px; display: block;"></canvas>
+                    </div>
+
+                    <div id="xAxisLabels"
+                        style="width: 632px; height: 18px; display: flex; justify-content: space-between; font-size: 14px; color: #000; opacity: 60%; user-select: none; margin-top: 9px; margin-left:24px;">
+                        <div>Jan</div>
+                        <div>Feb</div>
+                        <div>Mar</div>
+                        <div>Apr</div>
+                        <div>May</div>
+                        <div>Jun</div>
+                        <div>Jul</div>
+                        <div>Aug</div>
+                        <div>Sep</div>
+                        <div>Oct</div>
+                        <div>Nov</div>
+                        <div>Dec</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../function/Js/dashboard.js"></script>
+
+
+</html>
