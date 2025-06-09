@@ -9,6 +9,7 @@ class FinancialDashboard {
         this.setupResponsive();
         this.animateCards();
         this.drawChart(); // Draw chart initially
+        this.setupNotificationBell();
     }
 
     // Navigation functionality
@@ -167,6 +168,54 @@ class FinancialDashboard {
         // Draw both data curves
         drawSmoothCurve(data1, '#6c5ce7', 'rgba(108, 92, 231, 0.4)');
         drawSmoothCurve(data2, '#fdcb6e', 'rgba(253, 203, 110, 0.4)');
+    }
+
+    setupNotificationBell(){
+        const profileIcon = document.getElementById("profileIcon");
+        const notificationBox = document.getElementById("notificationBox");
+
+        const messageIcon = document.getElementById("messageIcon");
+        const messageBox = document.getElementById("messageBox");
+
+
+        if (!profileIcon || !notificationBox) {
+            return;
+            
+        }
+
+        if (!messageIcon || !messageBox) {
+            return;
+            
+        }
+
+        profileIcon.addEventListener("click", (event) => {
+            event.stopPropagation();
+
+            const isVisible = notificationBox.style.display === 'block';
+            notificationBox.style.display = isVisible ? "none" : "block";
+        });
+
+        messageIcon.addEventListener("click", (event) => {
+
+            event.stopPropagation();
+
+            const isVisible = messageBox.style.display === "block";
+            messageBox.style.display = isVisible ? "none" : "block";
+        })
+
+        document.addEventListener("click", (event) => {
+            if (!notificationBox.contains(event.target) && notificationBox) {
+
+                notificationBox.style.display = "none";
+                
+            }
+
+            if (!messageBox.contains(event.target) && messageBox) {
+
+                messageBox.style.display = "none";
+                
+            }
+        })
     }
 }
 

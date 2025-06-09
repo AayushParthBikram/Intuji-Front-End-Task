@@ -111,11 +111,28 @@
             </div>
 
             <div class="user-profile">
-                <div class="profile-icon ">
+                <div class="profile-icon" id="profileIcon">
                     <i class="bi bi-bell text-muted"></i>
+                    <span class="badge-notify">3</span>
+                    <div class="notification-box" id="notificationBox">
+
+                        <div class="notification-item">🔔 Deposit of $2,000 received</div>
+                        <div class="notification-item">📈 Monthly Transaction report is ready</div>
+                        <div class="notification-item">💬 Admin sent you a message please have a check clicking on
+                            message icon</div>
+
+
+
+                    </div>
+
                 </div>
-                <div class="profile-icon ">
+                <div class="profile-icon" id="messageIcon">
                     <i class="bi bi-chat-left-text"></i>
+                    <span class="badge-notify">2</span>
+                    <div class="notification-box" id="messageBox">
+                        <div class="notification-item"> 💬 You received a message from Admin</div>
+    <div class="notification-item"> 📝 Reminder: Update your KYC documents</div>
+                    </div>
                 </div>
                 <div class="profile-info">
                     <div class="profile-avatar">
@@ -283,8 +300,8 @@
                         <div class="d-flex align-items-center chart-legend">
                             <div class="legend-item d-flex align-items-center" style="gap: 0.6rem;">
                                 <div class="legend-dot legend-purple "></div>
-                                    <span>Label 1</span>
-                                
+                                <span>Label 1</span>
+
                             </div>
                             <div class="legend-item d-flex align-items-center" style="gap: 0.6rem;">
                                 <div class="legend-dot legend-orange"></div>

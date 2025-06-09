@@ -145,6 +145,45 @@ body {
     background: var(--sidebar-bg);
     border-radius: 100px;
     border: solid 1px #dedede;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.notification-box{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: var(--main-bg);
+    padding: 10px;
+    width: 230px;
+    height: fit-content;
+    z-index: 1000;
+    border-radius: 6px;
+}
+
+.notification-item {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.badge-notify{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 2px 5px;
+
 }
 
 .profile-avatar {
